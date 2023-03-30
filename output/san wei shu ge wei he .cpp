@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n, a[100];
+    int n, a[100],b;
     cin >> n;
     a[1] = n / 100;
     a[2] = (n % 100) / 10;
