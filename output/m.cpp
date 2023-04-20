@@ -4,13 +4,13 @@ using namespace std;
 class date
 {
     public:
-       int year,month,day,num;
-       date(int y,int m,int d)
-       {
-           year = y;
-           month = m;
-           day = d;
-       }
+        int year, month ,day,num;
+        date(int y, int m, int d)
+        {
+            year = y;
+            month = m;
+            day = d;
+    }
        void number()//2023--04--15
        { 
             int a,y,m,num1,num2;
@@ -32,7 +32,6 @@ class date
                 }
             }
             num1=366*a+365*(year-1990-a);
-            cout << num1 << endl;
             for(m=1;m<month;m++)
             {
                 if(m==1||m==3||m==5||m==7||m==8||m==10||m==12)
@@ -70,7 +69,7 @@ class date
                 }
             
             }
-            num=num1+num2+day;
+            num=num1+num2+day-2;
           
        }
        void print()
@@ -78,31 +77,31 @@ class date
             int a;
             a = num % 7;
             
-            if(a==0)
+            if(a==6)
             {
             cout << "Sunday" << endl;
             }
-            if(a==1)
+            if(a==0)
             {
             cout << "Monday" << endl;
             }
-            if(a==2)
+            if(a==1)
             {
             cout << "Tuesday" << endl;
             }
-            if(a==3)
+            if(a==2)
             {
             cout << "Wednesday" << endl;
             }
-            if(a==4)
+            if(a==3)
             {
             cout << "Thursday" << endl;
             }
-            if(a==5)
+            if(a==4)
             {
             cout << "Friday" << endl;
             }
-            if(a==6)
+            if(a==5)
             {
             cout << "Saturday" << endl;
             }
@@ -114,7 +113,8 @@ int main()
 {
     int y,m,d;
     char a[100],b[100];
-    cin >> y >> a >> m >> b >> d;
+    //cin >> y >> a >> m >> b >> d;
+    scanf("%d--%d--%d",&y,&m,&d);
     cout << y << endl;
      cout << m<< endl;
       cout << d<< endl;
