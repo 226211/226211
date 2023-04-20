@@ -4,8 +4,12 @@
 using namespace std;
 int main()
 {
-      int m, k, n, original, next, num, outcome[100];
-      cin >> m >> k;
+      int m, k, n, original, next, num, outcome[100],N;
+      cin >> N;
+      for (; N > 0;N--)
+      {
+
+         cin >> m >> k;
       original = m;
       next = k;
       num = 0;
@@ -50,4 +54,5 @@ int main()
          cout << outcome[n] << ' ';
       }
       system("pause");
+    }
 }
